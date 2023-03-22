@@ -20,7 +20,6 @@
             return operacao;
 
         }
-
         static bool operacaoInvalida(string opcao)
         {
             bool opcaoInvalida =
@@ -33,7 +32,6 @@
 
             return opcaoInvalida;
         }
-
         static decimal pegarValores(string palavras)
         {
             Console.WriteLine(palavras);
@@ -41,7 +39,6 @@
 
             return valor;
         }
-
         static decimal soma (decimal resultado, decimal valor1, decimal valor2, ref int quantidadeDeResultados)
         {
             resultado = valor1 + valor2;
@@ -50,7 +47,6 @@
 
             return resultado;
         }
-
         static decimal subtracao (decimal valor1, decimal valor2, decimal resultado, ref int quantidadeDeResultados)
         {
             resultado = valor1 - valor2;
@@ -59,7 +55,6 @@
 
             return resultado;
         }
-
         static decimal divisao(decimal valor1, ref decimal valor2, decimal resultado, ref int quantidadeDeResultados)
 
         {
@@ -84,7 +79,6 @@
                 return resultado;
             }
         }
-
         static decimal multiplicacao(decimal valor1, decimal valor2, decimal resultado, ref int quantidadeDeResultado)
         {
             resultado = valor1 * valor2;
@@ -92,7 +86,6 @@
             resultadosAntigos[quantidadeDeResultados - 1] = resultado;
             return resultado;
         }
-
         static void mostrarResultadosAntigos()
         {
             Console.WriteLine("Resultados antigos:");
@@ -111,30 +104,22 @@
             }
             
         }
-
         static void mostrarResultado (decimal resultado)
         {
             Console.WriteLine($"O resultado eh {Math.Round(resultado, 2)}");
         }
-
         static void Main(string[] args)
         {
-
             Console.WriteLine("Calculadora!! ");
-
             decimal resultado = 0;
-           
-            
             string palavra;
             decimal valor1 = 0; 
             decimal valor2 = 0;
             bool continuar = true;
 
-            //Cancelar a operacao caso Escreva "Parar"
             while (continuar) 
             {
-                Console.Clear();
-
+               Console.Clear();
                string opcao = MostrarMenu();
                int operacao = int.Parse(opcao);
 
@@ -144,20 +129,15 @@
                     break;
                 }
 
-
                 if (operacao == 6)
                     break;
                 
-
                 if (operacao != 5)
                 {
                     valor1 = pegarValores("Qual o primeiro valor: ");
                     valor2 = pegarValores("Qual o segundo valor: ");
                 }
 
-
-
-                //De acordo com a operacao desejada fez a execulcao
                 switch (operacao)
                 {
                     case 1:
